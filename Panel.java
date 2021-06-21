@@ -232,7 +232,7 @@ public class Panel extends JPanel implements Runnable, KeyListener {
             if (score % 10 == 0) {
                 level++;
                 if (level > 10) level = 10;
-                setFPS(level * 10);
+                setFPS(level * 4);
             }
         }
         //code for game over if snake hit wall
@@ -256,7 +256,7 @@ public class Panel extends JPanel implements Runnable, KeyListener {
         g2d.setColor(Color.RED);
         apple.render(g2d);
         if (gameover) {
-            g2d.drawString("GAMEOVER! ", 150, 200);
+            g2d.drawString("GAME OVER! ", 150, 200);
             saveData();
         }
 
