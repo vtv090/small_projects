@@ -1,1 +1,1 @@
-# small_projects
+# Classic Snake Game With High Score
