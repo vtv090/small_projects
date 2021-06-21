@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[]args){
         JFrame frame = new JFrame("Classic Snake");
-        frame.setContentPane(new GamePanel());
+        frame.setContentPane(new Panel());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.pack();
