@@ -229,9 +229,9 @@ public class Panel extends JPanel implements Runnable, KeyListener {
             Entity e = new Entity(SIZE);
             e.setPosition(-100, -100);
             snake.add(e);
-            if (score % 10 == 0) {
+            if (score % 5 == 0) {
                 level++;
-                if (level > 10) level = 10;
+                if (level > 5) level = 5;
                 setFPS(level * 4);
             }
         }
