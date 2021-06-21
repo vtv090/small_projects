@@ -27,6 +27,7 @@ public class Panel extends JPanel implements Runnable, KeyListener {
     //movement
     private int dx, dy;
     private key currentKey;
+    private enum key {up, down, right, left, none};
 
     public GamePanel() {
         setFocusable(true);
@@ -71,7 +72,6 @@ public class Panel extends JPanel implements Runnable, KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-
         int k = e.getKeyCode();
         switch (k) {
             case KeyEvent.VK_UP:
@@ -84,8 +84,7 @@ public class Panel extends JPanel implements Runnable, KeyListener {
     }
 
     @Override
-    public void keyTyped(KeyEvent arg0) {
-    }
+    public void keyTyped(KeyEvent arg0) {}
 
     @Override
     public void run() {
@@ -227,11 +226,11 @@ public class Panel extends JPanel implements Runnable, KeyListener {
             setApple();
 
             Entity e = new Entity(SIZE);
-            e.setPosition(-100, -100);
+            e.setPosition(0, 0);
             snake.add(e);
             if (score % 5 == 0) {
                 level++;
-                if (level > 5) level = 5;
+                if (level > 10) level = 10;
                 setFPS(level * 2);
             }
         }
@@ -268,8 +267,5 @@ public class Panel extends JPanel implements Runnable, KeyListener {
 
         }
     }
-
-    //key input
-    private enum key {up, down, right, left, none}
 
 }
